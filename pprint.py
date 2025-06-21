@@ -12,7 +12,7 @@
 
 from stringbuilder import StringBuilder
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def _pretty_print_yaml(obj, indent=4, _current_indent=0, return_text=False):
     '''
     Pretty-print dicts/lists as YAML-like text.
@@ -50,7 +50,7 @@ def _pretty_print_yaml(obj, indent=4, _current_indent=0, return_text=False):
     # Default behavior: print the result
     print(str(result))
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def _pretty_print_json(obj, indent=4, _depth=0, return_text=False):
     '''
     Pretty-print nested dicts and lists in JSON-like style.
@@ -92,7 +92,7 @@ def _pretty_print_json(obj, indent=4, _depth=0, return_text=False):
     # Default behavior: print the result
     print(str(result))
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def pretty_print(obj, indent=4, markup='yaml', return_text=False):
     '''
     Public pretty print function.

@@ -1,6 +1,3 @@
-#!/micropython
-# -*- coding: utf-8 -*-
-#
 # Copyright 2020-2025 by Murray Altheim. All rights reserved. This file is part
 # of the Robot Operating System project, released under the MIT License. Please
 # see the LICENSE file included as part of this package.
@@ -30,7 +27,7 @@ class FileNotFoundError(Exception):
     '''     
     pass
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def load(fpath):
     try:
         with open(fpath, 'r') as f:
@@ -39,7 +36,7 @@ def load(fpath):
     except OSError as e:
         raise FileNotFoundError("file not found: {}".format(fpath))
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def dump(obj, file_path=None, indent=4):
     import pprint
     if file_path is None:
@@ -50,7 +47,7 @@ def dump(obj, file_path=None, indent=4):
         with open(file_path, "w") as f:
             f.write(text)
 
-# ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+# -----------------------------------------------------------------------------
 def parse(text):
     lines = text.split('\n')
     def parse_value(val):
@@ -119,5 +116,3 @@ def parse(text):
                 # push new container for nested block
                 stack.append((indent, val_obj))
     return root
-
-#EOF
