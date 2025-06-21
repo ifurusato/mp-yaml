@@ -1,6 +1,3 @@
-#!/micropython
-# -*- coding: utf-8 -*-
-#
 # Copyright 2020-2025 by Murray Altheim. All rights reserved. This file is part
 # of the Robot Operating System project, released under the MIT License. Please
 # see the LICENSE file included as part of this package.
@@ -109,5 +106,3 @@ def pretty_print(obj, indent=4, markup='yaml', return_text=False):
         return _pretty_print_yaml(obj, indent=indent, return_text=return_text)
     else:
         return _pretty_print_json(obj, indent=indent, return_text=return_text)
-
-#EOF
